@@ -4,8 +4,8 @@
   padding: 0px;
 }
 .container{
-    width: 600px;
-    height: 700px;
+    width: 31.2vw;
+    height: 70vh;
     background-color: #ffffff;
     position: absolute;
     box-shadow: 15px 15px 8px #888888;
@@ -87,15 +87,15 @@
 .firsthalf{
   position: absolute;
   z-index: 10;
-  height: 910px;
-  width: 660px;
+  height: 100vh;
+  width: 34.35vw;
   left: 0px;
 }
 .secondhalf{
   position: absolute;
   z-index: 10;
-  height: 910px;
-  width: 660px;
+  height: 100vh;
+  width: 34.35vw;
   left: 1270px;
   filter: blur(10px);
 }
