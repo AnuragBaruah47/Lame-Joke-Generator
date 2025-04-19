@@ -16,6 +16,77 @@
     z-index: 10;
 }
 
+#theme-toggle-button {
+  z-index: 20;
+  top: 0px;
+  font-size: 17px;
+  position: absolute;
+  display: inline-block;
+  width: 7em;
+  cursor: pointer;
+}
+
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}
+
 .card {
   position: relative;
   width: 100vw;
@@ -34,55 +105,6 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(315deg, #03a9f4, #ff0058);
-}
-.theme-checkbox {
-  --toggle-size: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 450px;
-  height: 50px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background-size: 205%;
-  background-position: 0;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 99em;
-  position: relative;
-  cursor: pointer;
-  font-size: var(--toggle-size);
-  z-index: 20;
-  bottom: 400px;
-}
-
-.theme-checkbox::before {
-  content: "";
-  width: 2.25em;
-  height: 2.25em;
-  position: absolute;
-  top: 0.438em;
-  left: 0.438em;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background-size: 205%;
-  background-position: 100%;
-  border-radius: 50%;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.theme-checkbox:checked::before {
-  left: calc(100% - 2.25em - 0.438em);
-  background-position: 0;
-}
-
-.theme-checkbox:checked {
-  background-position: 100%;
 }
 .firsthalf{
   position: absolute;
@@ -216,44 +238,32 @@ button:hover::after {
 .buttoncontainer{
     padding: 40px;
 }
-/* @keyframes button {
-0% {
-  background-color: red;
-}
-25% {
-  background-color: rgb(239, 239, 244);
-}
-50% {
-  background-color: blue;
-}
-100% {
-  background-color: green;
-}
-}
-@keyframes moveRight {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 1920px;
-  }
-  0% {
-    color: red;
-  }
-  25% {
-    color: rgb(2, 1, 12);
-  }
-  50% {
-    color: blue;
-  }
-  100% {
-    color: green;
-  }
-} */
 
-/* .nav {
-  position: relative;
-  animation-name: moveRight;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-} */
+@media (width<1335px) {
+  .title{
+    font-size: 30px;
+  }
+  .setupcontainer{
+    font-size: 10px;
+  }
+  .punchlinecontainer{
+    font-size: 10px;
+  }
+
+}
+@media (width<701px) {
+  .title{
+    font-size: 15px;
+  }
+  .button{
+    height: 40px;
+    width: 50px;
+    font-size: 5px;
+  }
+  .setupcontainer{
+    font-size: 8px;
+  }
+  .punchlinecontainer{
+    font-size: 8px;
+  }
+}

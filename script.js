@@ -3,19 +3,9 @@ const setup = document.querySelector(".setup");
 const punchline = document.querySelector(".punchline");
 const baseURL1 = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 const baseURL2 = "https://v2.jokeapi.dev/joke/Dark";
-const toggleButton=document.querySelector(".theme-checkbox")
-const firstHalf=document.querySelector(".firsthalf")
-const secondHalf=document.querySelector(".secondhalf")
+const toggleButton=document.querySelector("#toggle")
 console.log(toggleButton.checked);
-toggleButton.addEventListener("click",function(){
-  if (toggleButton.checked===true){
-    firstHalf.style.filter="blur(10px)"
-    secondHalf.style.filter="blur(0px)"
-}else{
-    secondHalf.style.filter="blur(10px)"
-    firstHalf.style.filter="blur(0px)"
-}
-})
+
 button.addEventListener("click", async function () {
 if (toggleButton.checked===false){
   try {
