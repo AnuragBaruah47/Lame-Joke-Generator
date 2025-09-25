@@ -1,235 +1,133 @@
+/* ---------- Base Reset ---------- */
 * {
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---------- Container ---------- */
 .container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #fff;
 }
 
-.container > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 700px;
-  width: 600px;
-  border: 1px solid rgb(255, 255, 255);
-  box-shadow: 10px 5px 5px rgb(167, 167, 167);
-  border-radius: 5px;
-  overflow-x: hidden;
-}
-
+/* ---------- Title ---------- */
 .title {
-  margin-top: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-.button {
-  height: 40px;
-  width: 120px;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
-  transition: all ease-in-out;
-  position: relative;
-  top: 200px;
-}
-
-.button:hover {
-  background-color: greenyellow;
-  height: 41px;
-  width: 125px;
-}
-
+/* ---------- Joke Screen ---------- */
 .screen {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-  height: 300px;
-  color: black;
-  width: 570px;
-  border: 1px solid rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px 20px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+  min-height: 120px;
 }
 
 .setup {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 900;
   font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 150px;
-  width: 550px;
-  margin-top: 60px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
+
 .punchline {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 150px;
-  width: 550px;
-  margin-top: 20px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #f0f0f0;
 }
 
+/* ---------- Dark Jokes Toggle ---------- */
+.but1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
 
+/* Toggle Switch Base */
 .checkbox-wrapper-8 .tgl {
   display: none;
 }
 
-.checkbox-wrapper-8 .tgl,
-  .checkbox-wrapper-8 .tgl:after,
-  .checkbox-wrapper-8 .tgl:before,
-  .checkbox-wrapper-8 .tgl *,
-  .checkbox-wrapper-8 .tgl *:after,
-  .checkbox-wrapper-8 .tgl *:before,
-  .checkbox-wrapper-8 .tgl + .tgl-btn {
-  box-sizing: border-box;
-}
-
-.checkbox-wrapper-8 .tgl::-moz-selection,
-  .checkbox-wrapper-8 .tgl:after::-moz-selection,
-  .checkbox-wrapper-8 .tgl:before::-moz-selection,
-  .checkbox-wrapper-8 .tgl *::-moz-selection,
-  .checkbox-wrapper-8 .tgl *:after::-moz-selection,
-  .checkbox-wrapper-8 .tgl *:before::-moz-selection,
-  .checkbox-wrapper-8 .tgl + .tgl-btn::-moz-selection,
-  .checkbox-wrapper-8 .tgl::selection,
-  .checkbox-wrapper-8 .tgl:after::selection,
-  .checkbox-wrapper-8 .tgl:before::selection,
-  .checkbox-wrapper-8 .tgl *::selection,
-  .checkbox-wrapper-8 .tgl *:after::selection,
-  .checkbox-wrapper-8 .tgl *:before::selection,
-  .checkbox-wrapper-8 .tgl + .tgl-btn::selection {
-  background: none;
-}
-
 .checkbox-wrapper-8 .tgl + .tgl-btn {
   outline: 0;
-  display: block;
-  width: 4em;
-  height: 2em;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
   position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.3);
+  transition: all 0.4s ease;
 }
 
-.checkbox-wrapper-8 .tgl + .tgl-btn:after,
-  .checkbox-wrapper-8 .tgl + .tgl-btn:before {
-  position: relative;
-  display: block;
+.checkbox-wrapper-8 .tgl + .tgl-btn::after {
   content: "";
-  width: 50%;
-  height: 100%;
-}
-
-.checkbox-wrapper-8 .tgl + .tgl-btn:after {
-  left: 0;
-}
-
-.checkbox-wrapper-8 .tgl + .tgl-btn:before {
-  display: none;
-}
-
-.checkbox-wrapper-8 .tgl:checked + .tgl-btn:after {
-  left: 50%;
-}
-
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn {
-  overflow: hidden;
-  transform: skew(-10deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: all 0.2s ease;
-  font-family: sans-serif;
-  background: #888;
-}
-
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after,
-  .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
-  transform: skew(10deg);
-  display: inline-block;
-  transition: all 0.2s ease;
-  width: 100%;
-  text-align: center;
   position: absolute;
-  line-height: 2em;
-  font-weight: bold;
+  top: 3px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.checkbox-wrapper-8 .tgl:checked + .tgl-btn {
+  background: #4ade80; /* green when ON */
+}
+
+.checkbox-wrapper-8 .tgl:checked + .tgl-btn::after {
+  transform: translateX(28px);
+}
+
+/* ---------- Generate Button ---------- */
+.button {
+  background: #6366f1;
+  border: none;
   color: #fff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
-  left: 100%;
-  content: attr(data-tg-on);
+.button:hover {
+  background: #4f46e5;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
-  left: 0;
-  content: attr(data-tg-off);
+.button:active {
+  transform: translateY(0);
 }
-
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
-  background: #888;
-}
-
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active:before {
-  left: -10%;
-}
-
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn {
-  background: #86d993;
-}
-
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:before {
-  left: -100%;
-}
-
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:after {
-  left: 0;
-}
-
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:active:after {
-  left: 10%;
-}
-
-
-
-.but1{
-  border: 1px solid white;
-  padding: 10px;
-  position: relative;
-  top: 100px;
-   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-}
-
-.text {
-     display: flex;
-  justify-content: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-}
-
