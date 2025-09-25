@@ -3,7 +3,7 @@ const setup = document.querySelector(".setup");
 const punchline = document.querySelector(".punchline");
 const baseURL1 = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 const baseURL2 = "https://v2.jokeapi.dev/joke/Dark";
-const toggleButton=document.querySelector("#toggle")
+const toggleButton=document.querySelector(".toggle")
 console.log(toggleButton.checked);
 
 button.addEventListener("click", async function () {
