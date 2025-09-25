@@ -1,4 +1,4 @@
-/* ---------- Base Reset ---------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   background-attachment: fixed;
 }
 
-/* ---------- Container ---------- */
+
 .container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -29,7 +29,7 @@ body {
   color: #fff;
 }
 
-/* ---------- Title ---------- */
+
 .title {
   font-size: 2rem;
   font-weight: 700;
@@ -39,7 +39,7 @@ body {
   text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* ---------- Joke Screen ---------- */
+
 .screen {
   background: rgba(255, 255, 255, 0.2);
   padding: 30px 20px;
@@ -61,7 +61,6 @@ body {
   color: #f0f0f0;
 }
 
-/* ---------- Dark Jokes Toggle ---------- */
 .but1 {
   display: flex;
   justify-content: space-between;
@@ -70,7 +69,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* Toggle Switch Base */
+
 .checkbox-wrapper-8 .tgl {
   display: none;
 }
@@ -101,14 +100,14 @@ body {
 }
 
 .checkbox-wrapper-8 .tgl:checked + .tgl-btn {
-  background: #4ade80; /* green when ON */
+  background: #4ade80; 
 }
 
 .checkbox-wrapper-8 .tgl:checked + .tgl-btn::after {
   transform: translateX(28px);
 }
 
-/* ---------- Generate Button ---------- */
+
 .button {
   background: #6366f1;
   border: none;
